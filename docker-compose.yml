@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python trood/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/mycode
+    ports:
+      - "8000:8000"
